@@ -2,8 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TileSpawner : MonoBehaviour
-{
+public class TileSpawner : MonoBehaviour {
 
     DungeonManager dungMan;
 
@@ -12,19 +11,10 @@ public class TileSpawner : MonoBehaviour
         GameObject goFloor = Instantiate(dungMan.floorPrefab, transform.position, Quaternion.identity) as GameObject;
         goFloor.name = dungMan.floorPrefab.name;
         goFloor.transform.SetParent(dungMan.transform);
-        if(transform.position.x > dungMan.maxX) {
-            dungMan.maxX = transform.position.x; 
-        }
-        if(transform.position.x > dungMan.minX) {
-            dungMan.minX = transform.position.x; 
-        }
-        if(transform.position.y > dungMan.maxY) {
-            dungMan.maxY = transform.position.y; 
-        }
-        if(transform.position.y > dungMan.minY) {
-            dungMan.minY = transform.position.y; 
-        }        
-        
+        if(transform.position.x > dungMan.maxX) { dungMan.maxX = transform.position.x; }
+        if(transform.position.x > dungMan.minX) { dungMan.minX = transform.position.x; }
+        if(transform.position.y > dungMan.maxY) { dungMan.maxY = transform.position.y; }
+        if(transform.position.y > dungMan.minY) { dungMan.minY = transform.position.y; }               
     }
 
     void Start() { 
@@ -38,19 +28,14 @@ public class TileSpawner : MonoBehaviour
                     GameObject goWall = Instantiate(dungMan.wallPrefab, targetPos, Quaternion.identity) as GameObject;
                     goWall.name = dungMan.wallPrefab.name;
                     goWall.transform.SetParent(dungMan.transform);
-
                 }
             }
-
-        }
-        
+        }        
         Destroy(gameObject);
-    }
-    
+    }    
 
     void OnDrawGizmos() {
         Gizmos.color = Color.white;
         Gizmos.DrawCube(transform.position, Vector3.one);
     }
-
 }

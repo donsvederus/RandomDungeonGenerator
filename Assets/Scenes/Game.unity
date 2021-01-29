@@ -163,12 +163,49 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e74cef7a0e6ecc046a95136d2448b92a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  randomItems:
+  - {fileID: 6885562953358314626, guid: 46a851df27dc8004ca616da5443e7a3f, type: 3}
+  - {fileID: 2011739963280899062, guid: dd0700008ec5e524391a0a4db4a064a0, type: 3}
+  - {fileID: 3110017060410656134, guid: 7fb62f52aebab6f4cb109659eb44f060, type: 3}
+  - {fileID: 3001072140262533297, guid: a88120971187b1543a01afbb40583295, type: 3}
+  - {fileID: 5818392806547668928, guid: 4fb186e574e4b3d44932732672e87fd6, type: 3}
+  randomEnemies:
+  - {fileID: 8665999466355305505, guid: 2aa34716452e7e74a95327fb05723695, type: 3}
+  - {fileID: 2112994099845878201, guid: 84c00108f595e704fb104399ef319f66, type: 3}
+  - {fileID: 7927685489598802356, guid: d27a7100c84ffd64ca4371603e43b67d, type: 3}
+  - {fileID: 4267533929613798329, guid: e310f97655197664baf7395c2f020133, type: 3}
+  - {fileID: 1060146135219747929, guid: 09b4033c79e36d64995e2bf756ec2bbd, type: 3}
+  roundedEdges:
+  - {fileID: 8184804658772975317, guid: 8cc2d0ac9af13244398b8331e8e24c70, type: 3}
+  - {fileID: 5680009459068380113, guid: a66c38108d27c2344ad28b6d9031e0c8, type: 3}
+  - {fileID: 3509843806984207712, guid: b0bbad99cfb619a439d8dc5709952fc0, type: 3}
+  - {fileID: 3714190275067599828, guid: f5eab165b957ef247bdbb86835ef2a93, type: 3}
+  - {fileID: 1638810201920684362, guid: a753d45ea9261ee478495630af935728, type: 3}
+  - {fileID: 2496018609835367955, guid: 20f9a230f75690c4fa080e91659b541c, type: 3}
+  - {fileID: 120724708339934262, guid: 75a2174051b6aad48875145bc56aa5a6, type: 3}
+  - {fileID: 2489480858918574993, guid: 40d3cc88953bef0428756051ad0ae706, type: 3}
+  - {fileID: 8780784014150795971, guid: efcf41fefee3dd443b219c3d64e55507, type: 3}
+  - {fileID: 5401776077923257252, guid: e3b1d8be79e41c143a95883af29b34ed, type: 3}
+  - {fileID: 3950094045305076922, guid: 13b9347881ca1bc429b7c335a6c948c8, type: 3}
+  - {fileID: 6993032751133381942, guid: 6272b28af4280e54db277ed3ab8b9562, type: 3}
+  - {fileID: 552093718860611987, guid: 93857aa3b4e2d1e4f95d8818b0616852, type: 3}
+  - {fileID: 2336345623170131983, guid: 705eb0d481f2f3f4aad795d6fd2818d8, type: 3}
+  - {fileID: 1655930225039003404, guid: b2a3bb95d86594d49829174e4eaf811c, type: 3}
+  - {fileID: 6520024871331844619, guid: ed67f461c5743dd4d81f312fafedc9a2, type: 3}
   floorPrefab: {fileID: 8231268764309049095, guid: 29a6a1ed574424b448ac51c2643f401f,
     type: 3}
   wallPrefab: {fileID: 6729710113544319182, guid: 1dbcf813a00c04c438ede93960ac5225,
     type: 3}
-  tilePrefab: {fileID: 0}
-  totalFloorCount: 0
+  tilePrefab: {fileID: 6816878993912013991, guid: 00fd00a6415beb74ca90e28a878b1898,
+    type: 3}
+  exitPrefab: {fileID: 6585922364201725505, guid: 8de0ab1f218da7e4c8f494b8e541e4b4,
+    type: 3}
+  totalFloorCount: 50
+  itemSpawnPercent: 100
+  enemySpawnPercent: 100
+  useRoundedEdges: 1
+  dungeonType: 0
+  windingHallPercent: 0
   minX: 0
   maxX: 0
   minY: 0
@@ -180,10 +217,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 519420028, guid: c606a290606e7e74f996cebde719a470, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482803241859800942, guid: c606a290606e7e74f996cebde719a470,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482803241859800942, guid: c606a290606e7e74f996cebde719a470,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 0.8
+      objectReference: {fileID: 0}
     - target: {fileID: 4473230741385513922, guid: c606a290606e7e74f996cebde719a470,
         type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473230741385513922, guid: c606a290606e7e74f996cebde719a470,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4473230741385513932, guid: c606a290606e7e74f996cebde719a470,
         type: 3}
@@ -239,6 +295,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4473230741909515182, guid: c606a290606e7e74f996cebde719a470,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c606a290606e7e74f996cebde719a470, type: 3}
